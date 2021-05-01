@@ -1,29 +1,14 @@
 console.log("hello Re:codedededededededed");
-//----- modal --------//
-
-
-// Get the button that opens the modal
-
-
-// Get the <span> element that closes the modal
-// let span = document.getElementById("closebtn")[0];
-
-// When the user clicks on the button, open the modal
-// btn.onclick = function() {
-//   modal.style.display = "block";
-// }
-
-// When the user clicks on <span> (x), close the modal
-// span.onclick = function() {
-//   modal.style.display = "none";
-// }
-
-// When the user clicks anywhere outside of the modal, close it
 
 const mainPage = document.getElementById("mainPage");
 const createbtn = document.getElementById("ctrwallet");
 const modal = document.getElementById("mymodal");
-const closeButtons = document.getElementsByClassName("closeButtons");
+const closeButtons = document.getElementById("closeButtons");
+const closeButtonss = document.getElementById("closeButtonss");
+
+
+const walletPage = document.getElementById("wallet-page");
+const createWallet2 = document.getElementById("btnctrwallet");
 
 
 createbtn.addEventListener("click", function(){
@@ -33,6 +18,32 @@ createbtn.addEventListener("click", function(){
 
 
 closeButtons.addEventListener("click", function(){
+  // alert("testing");
   modal.style.display = "none";
-  mainPage.style.display = "block";
+  mainPage.style.display = "block";  
 });
+
+closeButtonss.addEventListener("click", function(){
+  // alert("testing");
+  modal.style.display = "none";
+  mainPage.style.display = "block";  
+});
+
+
+createWallet2.addEventListener("click", function(){
+  modal.style.display = "none";
+  walletPage.style.display = "block"; 
+})
+
+
+
+class Wallet {
+  constructor(name, description, balance, currency){
+    this.name = name;
+    this.description = description;
+    this.balance = balance;
+    this.currency = currency;
+  }
+
+  
+}

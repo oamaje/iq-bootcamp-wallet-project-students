@@ -5,86 +5,114 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    
+
     <title>Wallet</title>
   </head>
   <body>
-
     <nav id="navbar">
       <p id="peetag">Wallet App</p>
     </nav>
-<div>
+    <div>
+      <div id="mainPage">
+        <img id="ghost" src="ghost.jpg" alt="Ghost" />
+        <div id="contex">
+          <p id="ops"><b>OoooPs!!</b></p>
+          <p>You have no wallets. Start by creating one</p>
+          <button id="ctrwallet" type="button"><b>Create Wallet</b></button>
+        </div>
+      </div>
 
-  <div id="mainPage">
+      <!-- Modal Form -->
+      <div><br /></div>
+      <div id="mymodal" class="modal">
+        <div class="modal-header">
+          <p id="walletheader">Create New Wallet</p>
+          <button id="closeButtons" type="button">X</button>
+        </div>
 
-    <img id="ghost" src="ghost.jpg" alt="Ghost" />
-    <div id="contex">
-      <p id="ops"><b>OoooPs!!</b></p>
-      <p>You have no wallets. Start by creating one</p>
-      <button id="ctrwallet" type="button"><b>Create Wallet</b></button>
+        <hr />
+
+        <div class="modal-content">
+          <form>
+            <div>
+              <label for="uname"><strong>Your name : </strong></label>
+              <input type="text" placeholder="Enter your name" required />
+            </div>
+
+            <div>
+              <label for="$$"><strong>Currency : </strong></label>
+              <input
+                type="radio"
+                id="usdd"
+                name="Currencyselector"
+                value="USD"
+              />
+              USD
+              <input
+                type="radio"
+                id="iraqiDinar"
+                name="Currencyselector"
+                value="IQD"
+              />
+              IQD
+            </div>
+
+            <div>
+              <label for="yourmoney"><strong>Balance : </strong></label>
+              <input
+                type="text"
+                placeholder="Enter The Money PuNk !"
+                required
+              />
+            </div>
+            <div>
+              <label for="desc"><strong>Description : </strong></label>
+              <input type="text" placeholder="did you steal it ?" />
+            </div>
+          </form>
+          <hr />
+
+          <div class="modal-footer">
+            <button type="button" class="closeButtons" id="closeButtonss">
+              Close
+            </button>
+            <button type="button" id="btnctrwallet">Create Wallet</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="wallet-page">
+          <h1>Wallet Balance: </h1>
+
+          <div id="parrentWalletPageOrder">
+            <div class="walletPageOrder">
+              <label for="makeTransaction">Make Transaction:</label><br>
+              <input type="text" id="makeTransaction" name="makeTransaction"><br>
+              <i class="dollarIcon"></i>
+              <i class="dinarIcon"></i>
+              <button type="button" id="incomeButton">Income</button>
+              <button type="button" id="expenseButton">Expense</button>
+             </div>
+                
+            <div class="walletPageOrder"> 
+              <label for="transactionNote">Last name:</label><br>
+                <input type="text" id="transactionNote" name="transactionNote">
+               
+                <label for="transactionTag">Transaction tags:</label><br>
+                <input type="text" id="transactionTag" name="transactionTag">
+                <button type="submit" id="addTransaction">Add Transaction</button>
+            </div>
+
+          </div>
+
+         
+            
+         
+
+
+      </div>
     </div>
-</div>    
-   
-
-
-
-
-<!-- Modal Form -->
-<div><br></div>
-<div id="mymodal" class="modal">
-
-
-  <div class="modal-header">
-    <p id="walletheader">Create New Wallet</p>
-    <button id="buttonx" id="closeButtons" type="button">X</button>  
-  </div>
-  <hr />
-  <div class="modal-content">
-    <form>
-      <div>
-        <label for="uname"><strong>Your name : </strong></label>
-        <input type="text" placeholder="Enter your name" required />
-      </div>
-
-      <div>
-        <label for="$$"><strong>Currency : </strong></label>
-        <input type="radio" id="usdd" name="Currencyselector" value="USD" />
-        USD
-        <input
-          type="radio"
-          id="iraqiDinar"
-          name="Currencyselector"
-          value="IQD"
-        />
-        IQD
-      </div>
-
-      <div>
-        <label for="yourmoney"><strong>Balance : </strong></label>
-        <input type="text" placeholder="Enter The Money PuNk !" required />
-      </div>
-      <div>
-        <label for="desc"><strong>Description : </strong></label>
-        <input type="text" placeholder="did you steal it ?" />
-      </div>
-    </form>
-    <hr />
-
-    <div class="modal-footer">
-      <button type="button"  class = "closeButtons" id="closebtn">Close</button>
-      <button type="button" id="btnctrwallet">Create Wallet</button>
-    </div>
-  </div>
-</div>
-
-
-
- </div>
-   
-    
-
-
 
     <script src="scripts.js"></script>
-    </body>
+  </body>
 </html>
