@@ -40,7 +40,33 @@ font-size: 19px;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    display: none;
    }
+
+    .modal-header{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding-left: 20px;
+        /* padding-right: 20px; */
+    }
+
+    #buttonx{
+        
+        /* width: 20px; */
+        height: 20px;
+        text-align: center;
+        background-color: none;
+        border: none;
+        
+    }
+    #buttonx:hover{
+        background-color: red;
+        color: white;
+    }
+
+
+
 
    form{
      height: 290px;
@@ -50,3 +76,6 @@ font-size: 19px;
     
    }
   
+#ctrwallet:hover{
+    background-color: lightcoral;
+}
