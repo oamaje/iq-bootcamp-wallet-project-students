@@ -23,6 +23,7 @@
       </div>
 
       <!-- Modal Form -->
+
       <div><br /></div>
       <div id="mymodal" class="modal">
         <div class="modal-header">
@@ -36,7 +37,12 @@
           <form>
             <div>
               <label for="uname"><strong>Your name : </strong></label>
-              <input type="text" placeholder="Enter your name" required />
+              <input
+                id="uname"
+                type="text"
+                placeholder="Enter your name"
+                required
+              />
             </div>
 
             <div>
@@ -45,14 +51,14 @@
                 type="radio"
                 id="usdd"
                 name="Currencyselector"
-                value="USD"
+                value="true"
               />
               USD
               <input
                 type="radio"
                 id="iraqiDinar"
                 name="Currencyselector"
-                value="IQD"
+                value="False"
               />
               IQD
             </div>
@@ -60,6 +66,7 @@
             <div>
               <label for="yourmoney"><strong>Balance : </strong></label>
               <input
+                id="umoney"
                 type="text"
                 placeholder="Enter The Money PuNk !"
                 required
@@ -81,35 +88,37 @@
         </div>
       </div>
 
+      <!-- this is the wallet page -->
+
       <div id="wallet-page">
-          <h1>Wallet Balance: </h1>
+        <h1 id="walletpagename"></h1>
 
-          <div id="parrentWalletPageOrder">
-            <div class="walletPageOrder">
-              <label for="makeTransaction">Make Transaction:</label><br>
-              <input type="text" id="makeTransaction" name="makeTransaction"><br>
-              <i class="dollarIcon"></i>
-              <i class="dinarIcon"></i>
-              <button type="button" id="incomeButton">Income</button>
-              <button type="button" id="expenseButton">Expense</button>
-             </div>
-                
-            <div class="walletPageOrder"> 
-              <label for="transactionNote">Last name:</label><br>
-                <input type="text" id="transactionNote" name="transactionNote">
-               
-                <label for="transactionTag">Transaction tags:</label><br>
-                <input type="text" id="transactionTag" name="transactionTag">
-                <button type="submit" id="addTransaction">Add Transaction</button>
-            </div>
-
+        <div id="parrentWalletPageOrder">
+          <div class="walletPageOrder">
+            <label for="makeTransaction">Make Transaction : </label><br />
+            <input
+              type="text"
+              id="makeTransaction"
+              name="makeTransaction"
+            /><br />
+            <i class="dollarIcon"></i>
+            <i class="dinarIcon"></i>
+            <button type="button" id="incomeButton">Income</button>
+            <button type="button" id="expenseButton">Expense</button>
           </div>
 
-         
-            
-         
+          <div class="walletPageOrder">
+            <label for="transactionNote">Transaction Notes : </label><br />
+            <input type="text" id="transactionNote" name="transactionNote" />
 
+            <label for="transactionTag">Transaction tags : </label><br />
+            <input type="text" id="transactionTag" name="transactionTag" />
+            <br />
+          </div>
+          <button type="submit" id="addTransaction">Add Transaction</button>
+        </div>
 
+        <div id="wallet_transactions"></div>
       </div>
     </div>
 

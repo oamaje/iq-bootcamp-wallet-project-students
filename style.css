@@ -80,10 +80,6 @@ font-size: 19px;
     background-color: lightcoral;
 }
 
-#mainPage{
-    /* display: nne; */
-}
-
 #incomeButton{
     color: green;
     border: green 1px solid;
@@ -131,3 +127,29 @@ font-size: 19px;
     background-color: grey;
 }
 
+#wallet-page {
+    background-color: aliceblue;
+    border: 3px solid #9ab4ca;
+    border-radius: 3%;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+    width: 1000px;
+    height: 600px;
+    margin-left: 25%;
+    justify-content: center;
+    flex-direction: column;
+}
+#incomeButton , #expenseButton ,#transactionNote , #transactionTag {
+    margin-left: 25px;
+    margin-right: 10px;
+    border-radius: 10%;
+}
+
+#walletpagename{
+    color: #597c99;
+    font-size: 50px;
+}
+#addTransaction{
+    margin-top: 40px
+}
