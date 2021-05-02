@@ -41,26 +41,32 @@ createWallet2.addEventListener("click", function () {
       return "IQD";
     }
   }
-  walletpagename.innerHTML = `${unameval.value} Wallet Balance: ${umoneyval.value} ${getcurrency()}`;
+  walletpagename.innerHTML = `${unameval.value} Wallet Balance: ${
+    umoneyval.value
+  } ${getcurrency()}`;
+
+  const addtrans = document
+    .getElementById("addTransaction")
+    .addEventListener("click", function walletpg() {
+      const transaction = document.getElementById("makeTransaction");
+      const plus = document.getElementById("incomeButton");
+      const minus = document.getElementById("expenseButton");
+      const notes = document.getElementById("transactionNote");
+      const tags = document.getElementById("transactionTag");
+      const divtrans = document.getElementById("wallet_transactions");
+      const transactionli = document.createElement("li");
+      function calc() {
+        if (plus == ture) {
+          return "+";
+        } else if (plus == false) {
+          return "-";
+        }
+      }
+      divtrans.innerHTML = `${umoneyval.value} ${calc()} ${transaction.value}`;
+    });
 });
- const addtrans = document.getElementById("addTransaction").addEventListener("click",
-function walletpg() {
-  const transaction = document.getElementById("makeTransaction");
-  const plus = document.getElementById("incomeButton");
-  const minus = document.getElementById("expenseButton");
-  const notes = document.getElementById("transactionNote");
-  const tags  = document.getElementById("transactionTag");
-  
 
-})
-
-
-
-
-
-
-
-makeTransaction
+makeTransaction;
 class Wallet {
   constructor(name, description, balance, currency) {
     this.name = name;
