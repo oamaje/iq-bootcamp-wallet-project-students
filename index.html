@@ -103,8 +103,8 @@
             /><br />
             <i class="dollarIcon"></i>
             <i class="dinarIcon"></i>
-            <button type="button" id="incomeButton" value=true >Income</button>
-            <button type="button" id="expenseButton" value=false >Expense</button>
+            <input type="radio" id="incomeButton" value=+ name="calc">Income</input>
+            <input type="radio" id="expenseButton" value=- name="calc">Expense</input>
           </div>
 
           <div class="walletPageOrder">
@@ -122,6 +122,9 @@
     </div>
 
     <div id="wallet_transactions"></div>
+    <ul id="unorderedlist">
+
+    </ul>
     <script src="scripts.js"></script>
   </body>
 </html>

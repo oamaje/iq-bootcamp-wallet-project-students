@@ -49,21 +49,28 @@ createWallet2.addEventListener("click", function () {
     .getElementById("addTransaction")
     .addEventListener("click", function walletpg() {
       const transaction = document.getElementById("makeTransaction");
-      const plus = document.getElementById("incomeButton");
-      const minus = document.getElementById("expenseButton");
+      function calculate() {
+        if (document.getElementById("incomeButton").checked) {
+          return parseInt(umoneyval.value) + parseInt(transaction.value);
+        } else if (document.getElementById("expenseButton").checked) {
+          return parseInt(umoneyval.value) - parseInt(transaction.value);
+        }
+      }
+      console.log(typeof calculate());
       const notes = document.getElementById("transactionNote");
       const tags = document.getElementById("transactionTag");
       const divtrans = document.getElementById("wallet_transactions");
-      const transactionli = document.createElement("li");
-      function calc() {
-        if (plus == ture) {
-          return "+";
-        } else if (plus == false) {
-          return "-";
+      function callulli() {
+        const list = document.getElementById("unorderedlist");
+        for (let index = 0 ; index > list.length ; index++) {
+          const list_item = document.createElement("li");
+          list.appendChild(list_item);
         }
       }
-      divtrans.innerHTML = `${umoneyval.value} ${calc()} ${transaction.value}`;
-    });
+      const breaktag = document.createElement(`br`)
+      callulli();
+       list_item = divtrans.innerHTML = `Your Balance is ${calculate()} and the Transaction was made at : ${new Date()} ${breaktag}  ${notes.value} ${tags.value}`;
+  });
 });
 
 makeTransaction;

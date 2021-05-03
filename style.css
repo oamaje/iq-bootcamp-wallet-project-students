@@ -153,3 +153,8 @@ font-size: 19px;
 #addTransaction{
     margin-top: 40px
 }
+
+#wallet_transactions{
+    text-align: center;
+    font-size: 30px;
+}
