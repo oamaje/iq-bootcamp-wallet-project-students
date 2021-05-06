@@ -8,20 +8,23 @@ const closeButtonss = document.getElementById("closeButtonss");
 
 const walletPage = document.getElementById("wallet-page");
 const createWallet2 = document.getElementById("btnctrwallet");
+const descriptioninput = document.getElementById("desc")
 
 createbtn.addEventListener("click", function () {
   mainPage.style.display = "none";
   modal.style.display = "block";
+  // const currencyselec = document.getElementsByName('input[name="Currencyselector"]:checked');
+  // console.log(currencyselec.value);
+  // let new_Wallet = new Wallet ( unameval.value , descriptioninput.value, umoney.value, currencyselec.value  );
+  console.log(uname.value);
 });
 
 closeButtons.addEventListener("click", function () {
-  // alert("testing");
   modal.style.display = "none";
   mainPage.style.display = "block";
 });
 
 closeButtonss.addEventListener("click", function () {
-  // alert("testing");
   modal.style.display = "none";
   mainPage.style.display = "block";
 });
@@ -56,20 +59,18 @@ createWallet2.addEventListener("click", function () {
           return parseInt(umoneyval.value) - parseInt(transaction.value);
         }
       }
+      
       console.log(typeof calculate());
       const notes = document.getElementById("transactionNote");
       const tags = document.getElementById("transactionTag");
       const divtrans = document.getElementById("wallet_transactions");
       function callulli() {
         const list = document.getElementById("unorderedlist");
-        for (let index = 0 ; index > list.length ; index++) {
           const list_item = document.createElement("li");
+          list_item.innerHTML =`Your Balance is ${calculate()} and the Transaction was made at : ${new Date()}  ${notes.value} ${tags.value}`;
           list.appendChild(list_item);
-        }
       }
-      const breaktag = document.createElement(`br`)
-      callulli();
-       list_item = divtrans.innerHTML = `Your Balance is ${calculate()} and the Transaction was made at : ${new Date()} ${breaktag}  ${notes.value} ${tags.value}`;
+       callulli();
   });
 });
 
@@ -82,3 +83,4 @@ class Wallet {
     this.currency = currency;
   }
 }
+
